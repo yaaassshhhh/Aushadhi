@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %>
+<div class="filter-section">
+    <h2>Filters</h2>
+    <div class="filter-group">
+        <label for="price-range">Price Range:</label>
+        <input type="range" id="price-range" min="0" max="1000">
+        <span id="price-value">Rs.0 - Rs.1000</span>
+    </div>
+    <div class="filter-group">
+        <label for="distance">Distance (kilometers):</label>
+        <input type="number" id="distance" min="0" step="1">
+    </div>
+    <div class="filter-group">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+            <option value="low-to-high">Low to High</option>
+            <option value="high-to-low">High to Low</option>
+        </select>
+    </div>
+</div>
+<div class="current-location">
+    <h2>Your Location: </h2>
+    <img src="images/location-icon.png" alt="location-icon">
+    <p>Loading...</p>
+</div>
+<%- include('partials/footer.ejs') %>
+

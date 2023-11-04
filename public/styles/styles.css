@@ -1,0 +1,902 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+body{
+margin: 0;
+width: 100%;
+
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #04aa6d;
+    overflow: hidden;
+    width: 1263px;
+    height: 55px;
+    margin: 0px;
+}
+
+
+
+/*adjusting anchor tag of logo*/
+.topnav a.homeAndLogo
+{
+    padding-top: 8px;
+    padding-right: 3px;
+    padding-bottom: 0;
+    padding-left: 3px ;
+    margin-left: 42px ;
+}
+
+
+
+
+/*adjusting home/projectName */
+.topnav a.home 
+{
+    height: 14px;
+    padding-left: 5px;
+    /* margin-left: 5px; */
+    padding-top: 18px;
+    padding-bottom: 46px;
+    padding-right: 16px;
+    margin-right: 25px;
+}
+
+  
+/*adjusting logo Image*/
+.topnav a.homeAndLogo img.logo
+{
+    height: 40px;
+    width: 40px;
+}
+
+/* adjusting login button */
+.topnav a.login
+{
+    margin-left:0px;
+    
+    bottom: 40px;
+}
+
+/* adjusting ambulance in nav bar */
+
+.topnav a.ambulances
+{
+    margin-left: 29px;
+}
+
+
+/* adjusting anchor tag of logo */
+.topnav a.cartAndLogo
+{
+    padding-top: 8px;
+    padding-right: 3px;
+    padding-bottom: 0;
+    padding-left: 3px ;
+    margin-left: 50px ;
+}
+
+/*adjusting cart*/
+.topnav a.cart 
+{
+    height: 14px;   
+    padding-left: 0px;
+    padding-right: 2px ;
+    margin-right: 25px;
+}
+
+
+/* adjusting cart logo */
+.topnav a.cartAndLogo img.cartLogo
+{
+    height: 40px;
+    width: 40px;
+}
+
+/* adjusting accounts in nav bar */
+.topnav a.account
+{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 80px;
+    padding-top: 8px;
+}
+
+/* adjusting the logo of accounts */
+.topnav a.account img.accountLogo
+{
+    height: 40px;
+    width: 40px;
+}
+
+   /* Style the links inside the top navigation bar */
+  .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 18px 45px;
+    text-decoration: none;
+    font-size: 17px;
+    /* display: inline-block; */
+  }
+
+
+
+
+  /*change the color of the links on hover*/
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 10px;
+    margin-right: 16px;
+    font-size: 17px;
+    width: 380px;
+    height: 28px;
+    /* display: inline-block; */
+  }
+
+/* styling the search bar */
+  
+
+
+
+/* Add a black background color to the bottom navigation */
+.bottomnav {
+    background-color: white;
+    overflow: hidden;
+    margin: 0px;
+    width: 1265px;
+    height: 55px;
+  }
+  
+
+
+
+  /* Style the links inside the navigation bar */
+  .bottomnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 45.725px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+
+
+  /* Change the color of links on hover */
+  .bottomnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+
+
+
+
+  /* matching colors with the top nav */
+  .bottomnav a.nearbyHospitals  {
+    background-color: #04aa6d;
+    color: white;
+  }
+  
+  .bottomnav a.nearbyLabs  {
+    background-color: #04aa6d;
+    color: white;
+  }
+
+  .bottomnav a.askDoc  {
+    background-color: #04aa6d;
+    color: white;
+  }
+
+  .bottomnav a.offers  {
+    background-color: #04aa6d;
+    color: white;
+  }
+
+
+  /* carousel box modeling */
+  *,*::before,*::after{
+    box-sizing: border-box;
+  }
+
+  /* adding gradient and dimenssioning */
+  .wrapper
+  { margin-top: 30px;
+    background-image: linear-gradient(to top,#ffffff,#EDF6E5,#D5ECC2, #91C788,  #D5ECC2, #EDF6E5,#ffffff);
+    
+    height: 100%;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 220px;
+  }
+
+  .carousel{
+    position:relative;
+    width : 500px;
+    /* height: 100px; remove to remove the gradient in the carousel */
+    max-width: 500px;
+    display:flex;
+    left: 85px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .carouselItem
+  {
+    display : flex;
+    align-items :center;
+    position: absolute;
+    width: 100%;
+    padding: 0 12px;
+    opacity: 0;
+    filter : drop-shadow(0 2px 2px #555);
+    will-change: transform,opacity;
+    -webkit-animation: carousel-animate-vertical 27s linear infinite;
+            animation : carousel-animate-vertical 27s linear infinite;
+    animation-iteration-count: infinite;
+  }
+
+  .carouselItem:nth-child(1)
+  {
+    -webkit-animation-delay:calc(3s * -2);
+            animation-delay: calc(3s * -2);
+  }
+
+  .carouselItem:nth-child(2)
+  {
+    -webkit-animation-delay:calc(3s * -1);
+            animation-delay: calc(3s * -1);
+  }
+
+  .carouselItem:nth-child(3)
+  {
+    -webkit-animation-delay:calc(3s * 0);
+            animation-delay: calc(3s * 0);
+  }
+
+  .carouselItem:nth-child(4)
+  {
+    -webkit-animation-delay:calc(3s * 1);
+            animation-delay: calc(3s * 1);
+  }
+
+  .carouselItem:nth-child(5)
+  {
+    -webkit-animation-delay:calc(3s * 2);
+            animation-delay: calc(3s * 2);
+  }
+
+  .carouselItem:nth-child(6)
+  {
+    -webkit-animation-delay:calc(3s * 3);
+            animation-delay: calc(3s * 3);
+  }
+
+  .carouselItem:nth-child(7)
+  {
+    -webkit-animation-delay:calc(3s * 4);
+            animation-delay: calc(3s * 4);
+  }
+
+  .carouselItem:nth-child(8)
+  {
+    -webkit-animation-delay:calc(3s * 5);
+            animation-delay: calc(3s * 5);
+  }
+
+  .carouselItem:last-child
+  {
+    -webkit-animation-delay:calc(3s * 6);
+            animation-delay: calc(3s * 6);
+  }
+  
+
+  .carouselItemHead{
+    border-radius: 50%;
+    background-color: #d7f7fc;
+    width: 90px;
+    height: 90px;
+    padding: 14px;
+    position: relative;
+    margin-right: -45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background-image: linear-gradient(to top, #A0D8B3, #E5F9DB, #80d4ee, #E5F9DB, #ffffff);
+  }
+
+  .carouselItemBody{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px 20px 26px 70px;
+  }
+
+  .title
+  {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+@keyframes carousel-animate-vertical{
+  0%{
+    transform: translateX(100%) scale(0.7);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  3%,11.11% {
+    transform: translateX(100%) scale(1);
+    opacity: 0.4;
+    visibility: visible;
+  }
+
+  14.11%,22.22% {
+    transform: translateX(0) scale(1.5);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  25.22%,33.33%{
+    transform: translateX(-100%) scale(1);
+    opacity: 0.4;
+    visibility: visible;
+  }
+  36.33%{
+    transform: translateX(-100%) scale(0.7);
+    opacity: 0;
+    visibility: visible;
+  }
+  100%{
+    transform: translateX(-100%) scale(0.7);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/*
+
+1. `*,*::before,*::after{ box-sizing: border-box; }`: This is a universal selector that applies the `box-sizing` property with a value of `border-box` to every element on the page, including all pseudo-elements. This means that the width and height properties include the content, padding, and border, but not the margin.
+
+2. `.wrapper {...}`: This class is applied to a div that wraps around the carousel. It sets the background to a linear gradient, makes it take up the full height and width of its parent, and centers its children elements.
+
+3. `.carousel {...}`: This class is applied to the actual carousel div. It positions it relative to its parent (the wrapper), sets a maximum width, and centers its children elements in a column.
+
+4. `.carouselItem {...}`: This class is applied to each item in the carousel. It positions them absolutely within the carousel div, gives them a width of 100%, adds some padding, sets their initial opacity to 0, applies a drop shadow for some depth, and sets up an animation called `carousel-animate-vertical`.
+
+5. `.carouselItem:nth-child(n) {...}`: These selectors target each carousel item based on their order in the HTML. They delay the start of the animation for each item, creating a staggered effect.
+
+6. `.carouselItemHead {...}` and `.carouselItemBody {...}`: These classes style the head and body of each carousel item.
+
+7. `.title {...}`: This class styles the title text within each carousel item.
+
+8. `@keyframes carousel-animate-vertical {...}`: This is a keyframes rule that defines the `carousel-animate-vertical` animation used in `.carouselItem`. It moves items left and right (translateX), scales them, changes their opacity, and toggles their visibility at different points in the animation timeline. */
+
+
+.container{
+  width: 1000px;  
+  position: relative;       
+  display: flex;  
+  top: 110px;
+  left: 125px;
+  justify-content: space-between;
+  }
+  
+  .container .card{  
+  position: relative;  
+  cursor: pointer;  
+  height: 310px;
+  
+  }
+  
+  .container .card .face{  
+  width: 300px;  
+  height: 200px;
+  transition: 0.5s;  
+  /* opacity: 1;
+  z-index: 1; */
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  } 
+
+  .container .card.face.face1{  
+  position: relative;  
+  display: flex;  
+  background: #04aa6d; 
+  align-items: center;
+  box-sizing: border-box;  
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+
+  opacity: 1;
+  transform: translateY(100px);  
+  justify-content: center;  
+  z-index: 1;  
+  border-radius: 10px;
+  
+  }
+
+  .container .card:hover .face.face1{
+    background: #04aa6d;
+    transform: translateY(0);   
+    }
+
+    .container .card .face.face1 .content{ 
+      opacity: 1;
+      border-color: #333 ;
+      border-radius: 5px;  
+      border-radius: 10px;
+    }
+    
+    /* .container .card:hover .face.face1 .content {    
+    opacity: 1;    
+    } */
+    
+    .container .card .face.face1 .content h4{ 
+    margin: 10px 0 0;     
+    padding: 0;    
+    color: #04aa6d;    
+    text-align: center;
+    font-size: 1.5em;
+    border: 1px; 
+    opacity: 1;  
+    
+    } 
+     .container .card:hover .face.face1 .content h4{    
+    opacity: 1; 
+    color: #fff;    
+    }
+  .container .card .face.face2{    
+    position: relative;    
+    height: 100px;
+    background: #04aa6d;   
+    display: flex; 
+    justify-content: center;    
+    align-items: center;    
+    padding: 20px;    
+    box-sizing: border-box; 
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to top, #04aa6d, #00c2bd, #80d4ee, #d1e6fe, #ffffff);
+    transform: translateY(-100px);
+    opacity: 0;
+    }
+    
+    .container .card:hover .face.face2{
+      transform: translateY(0);
+      opacity: 1;      
+      }
+      
+      .container .card .face.face2 .content p{      
+      margin: 0;      
+      padding: 0;      
+      }
+      
+      .container .card .face.face2 .content a{ 
+      margin: 15px 0 0; 
+      font-weight: 900; 
+      color: #fff; 
+      padding: 5px;      
+      display: inline-block;      
+      text-decoration: none;      
+      border: 1px solid  #fff;      
+      }
+      
+      .container .card .face.face2 .content a:hover{      
+      background: #333;
+      color: #fff;
+      }
+      
+      .docPic
+      {
+        width: 300px;
+        height: 175px;
+        border-radius: 10px;
+      }
+   
+      
+
+
+
+      .slider
+      {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .slider .controls{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100px;
+        height: 100px;
+        z-index: 2;
+        top: 1350px;
+        
+      }
+
+      .slider .controls > div {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;  
+        font-size: 20px; 
+        cursor: pointer;
+        /* top: 900px; */
+      }
+
+      .slider .controls > .up {
+        top: 0px;
+        right: 0px;
+        background: #fff;
+        color: #111;
+
+      }
+
+      .slider .controls > .down {
+        bottom: 0px;
+        left: 0px;
+        background: #111;
+        color: #fff;
+      }
+
+      .slider .wrapper2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        top: 1050px;
+        box-shadow: 0.3em 0.3em 0.3em #04aa6d;
+      }
+
+      .slider .wrapper2 .left,
+      .slider .wrapper2 .right {
+        width: 50%;
+        overflow: hidden;
+        
+      }
+
+      .slider .wrapper2 .left > div,
+      .slider .wrapper2 .right > div {
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-in-out;
+      }
+
+      .slider .wrapper2 .left > div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 100px 0px 50px;
+      }
+      
+      .slider .wrapper2 .left  > div h2 {
+        font: 50px;
+        margin-bottom: 10px;
+      }
+
+      .slider .wrapper2 .left  > div p {
+        color: #555;
+        font-size: 18px;
+      }
+
+      .slider .wrapper2 .right  > div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slider .wrapper2 .rght div:nth-child(1) {
+        margin-top: -400vh;
+
+      }
+
+      .card-container {
+        display: flex;
+        gap: 60px;
+
+      }
+              .myCard {
+              background-color: transparent;
+              width: 180px;
+              height: 210px;
+              perspective: 1000px;
+              top: 80px;
+              left: 150px;
+              position: relative;
+              display: flex;
+            }
+            
+            .title {
+              font-size: 1.5em;
+              font-weight: 900;
+              text-align: center;
+              margin: 0;
+              color: black;
+            }
+            
+            .innerCard {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transition: transform 0.8s;
+              transform-style: preserve-3d;
+              cursor: pointer;
+            }
+            
+            .myCard:hover .innerCard {
+              transform: rotateY(180deg);
+            }
+            
+            .frontSide,
+            .backSide {
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-evenly;
+              width: 100%;
+              height: 100%;
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.8);
+              border-radius: 1rem;
+              color: white;
+              box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+              font-weight: 700;
+            }
+            
+            .frontSide,
+            .frontSide::before {
+              /* background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%); */
+              background-image: linear-gradient(to top, #04aa6d, #00c2bd, #80d4ee, #d1e6fe, #ffffff);
+            }
+            
+            .backSide,
+            .backSide::before {
+              /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+              background-image: linear-gradient(to top, #04aa6d, #00c2bd, #80d4ee, #d1e6fe, #ffffff);
+            }
+            
+            .backSide {
+              transform: rotateY(180deg);
+            }
+            
+            .frontSide::before,
+            .backSide::before {
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              content: '';
+              width: 110%;
+              height: 110%;
+              position: absolute;
+              z-index: -1;
+              border-radius: 1em;
+              filter: blur(20px);
+              animation: animate 5s linear infinite;
+            }
+            
+            @keyframes animate {
+              0% {
+                opacity: 0.3;
+              }
+            
+              80% {
+                opacity: 1;
+              }
+            
+              100% {
+                opacity: 0.3;
+              }
+            }
+      
+      #locate-button,
+      #call-now-button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      
+      #locate-button:hover,
+      #call-now-button:hover {
+        background-color: #0056b3;
+      }
+
+ /* Filter for Pharmacy Page */
+ .filter-section {
+  position: absolute;
+  left: 0;
+  top: 105px;
+  height: 100%;
+  width: 210px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.filter-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  font-weight: bold;
+}
+input[type="range"] {
+  width: 100%;
+}
+
+/* Your Locations CSS*/
+.current-location{
+  display: flex;
+  position: absolute;
+  left: 250px;
+  align-items: center;
+}
+.current-location h2{
+  margin-right: 10px;
+}
+.current-location img{
+  margin: 0;
+  padding: 0;
+  width: 25px;
+}
+.current-location p{
+  margin-left: 10px;
+}
+
+/* card */
+.card-container {
+  display: flex;
+  gap: 60px;
+}
+        .myCard {
+        background-color: transparent;
+        width: 240px;
+        height: 320px;
+        perspective: 1000px;
+        top: 130px;
+        left: 250px;
+        position: relative;
+        display: flex;
+      }
+      
+      .title {
+        font-size: 1.5em;
+        font-weight: 900;
+        text-align: center;
+        margin: 0;
+        color: black;
+      }
+      
+      .innerCard {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }
+      
+      .myCard:hover .innerCard {
+        transform: rotateY(180deg);
+      }
+      
+      .frontSide,
+      .backSide {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 1rem;
+        color: white;
+        box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+        font-weight: 700;
+      }
+      
+      .frontSide,
+      .frontSide::before {
+        /* background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%); */
+        background-image: linear-gradient(to top, #04aa6d, #00c2bd, #80d4ee, #d1e6fe, #ffffff);
+      }
+      
+      .backSide,
+      .backSide::before {
+        /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+        background-image: linear-gradient(to top, #04aa6d, #00c2bd, #80d4ee, #d1e6fe, #ffffff);
+      }
+      
+      .backSide {
+        transform: rotateY(180deg);
+      }
+      
+      .frontSide::before,
+      .backSide::before {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        width: 110%;
+        height: 110%;
+        position: absolute;
+        z-index: -1;
+        border-radius: 1em;
+        filter: blur(20px);
+        animation: animate 5s linear infinite;
+      }
+      
+      @keyframes animate {
+        0% {
+          opacity: 0.3;
+        }
+      
+        80% {
+          opacity: 1;
+        }
+      
+        100% {
+          opacity: 0.3;
+        }
+      }
+
+#locate-button,
+#call-now-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#locate-button:hover,
+#call-now-button:hover {
+  background-color: #0056b3;
+}
+
+#apollo-img{
+  height: 210px;
+  width: 190px;
+}
+
+.google-map{
+  position: relative;
+  align-items: center;
+  top: 350px;
+  left: 350px;
+  width: 900px;
+}
+
+.pharmacy-header{
+  text-align: center;
+  font-size: large;
+}
+
+.google-map-1{
+  width: 100%;
+  height: 400px;
+  align-content: center;
+}
